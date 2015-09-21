@@ -1,0 +1,39 @@
+{
+    "name": "socket-chat-example",
+    "version": "0.0.1",
+    "description": "my first socket.io app",
+    "dependencies": {
+        "express": "4.10.2",
+        "socket.io": "1.2.0",
+        "lodash-compat": "3.9.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@bitbucket.org:inteduca-dev/simzar.git"
+    },
+    "scripts": {
+        "build": "browserify app/app.js -o app/assets/app.js",
+        "watch": "watchify app/app.js -o app/assets/app.js --debug --verbose",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "browser": {
+        "Reveal": "./app/vendor/reveal.js"
+    },
+
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    },
+    "browserify-shim": {
+        "angular": {
+            "depends": "jquery",
+            "exports": "angular"
+        },
+        "jquery": "$"
+    },
+    "author": "LEVEL Team",
+    "license": "Commercial",
+    "main": "app.js"
+}
+
