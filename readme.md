@@ -1,3 +1,5 @@
+# Spore like game. very slow and not optimized
+
 # chat-example
 
 This is the source code for a very simple chat example used for 
